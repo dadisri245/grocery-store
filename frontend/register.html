@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Grocery </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="csrf-token" content="kmapods5wQ5L1hn7rcR9OPst7EsN0gC7SrHh3m9K"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,600,700">
+        <link rel="stylesheet" href="css/styling.css">
+    </head>
+    <body> 
+        <div class="content">
+            <div class="container">
+                <img class="bg-img" src="https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/bg.jpg" alt="">
+                    <div class="menu">
+                        <a href="#connexion" class="btn-connexion"><h2>SIGN IN</h2></a>
+                    </div>
+                    <div class="connexion">
+                        <div class="contact-form">
+                            <label>EMAIL</label>
+                            <input placeholder="Enter email" type="email" id="email">
+                            
+                            <label>PASSWORD</label>
+                            <input placeholder="password" type="password" id="password">
+                            
+                            <div class="check">
+                                <label>				
+                                    <input id="check" type="checkbox" class="checkbox">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="23px">
+                                            <path class="path-back"  d="M1.5,6.021V2.451C1.5,2.009,1.646,1.5,2.3,1.5h18.4c0.442,0,0.8,0.358,0.8,0.801v18.398c0,0.442-0.357,0.801-0.8,0.801H2.3c-0.442,0-0.8-0.358-0.8-0.801V6"/>
+                                            <path class="path-moving" d="M24.192,3.813L11.818,16.188L1.5,6.021V2.451C1.5,2.009,1.646,1.5,2.3,1.5h18.4c0.442,0,0.8,0.358,0.8,0.801v18.398c0,0.442-0.357,0.801-0.8,0.801H2.3c-0.442,0-0.8-0.358-0.8-0.801V6"/>
+                                        </svg>
+                                </label>
+                                <h3>Keep me signed in</h3>
+                            </div>
+                            
+                            <input class="submit" value="SIGN IN" type="submit" onclick="auth()">
+                        </div>
+                        
+                        <hr>
+                    </div> 
+            </div>
+        </div>
+        </body> 
+        <script>
+            function auth(){
+                var email=document.getElementById("email").value;
+                var password=document.getElementById("password").value;
+                if(email=="admin@gmail.com" && password=="admin123"){
+                    window.location.assign("index.html");
+                    alert("login successful");
+                }
+                else{
+                    alert("Invalid information");
+                    return;
+                }
+            }
+        </script>
+        <script src="js/packages/jquery.min.js"></script>
+</html>
